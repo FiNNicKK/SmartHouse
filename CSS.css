@@ -2,7 +2,6 @@
     fill: #ace63c;
     fill-opacity: .3;
 }
-
 .kiwi {
     fill-opacity: 0;
 }
@@ -18,6 +17,7 @@
 }
 
 body {
+
     margin: 0;
     padding: 0;
     background: url(Background3.png) no-repeat center center fixed;
@@ -38,8 +38,7 @@ body {
 }
 
 .gearImage {
-    width: 20%;
-    height: auto;
+    width: 200px;
     position: absolute;
     z-index: 1;
 }
@@ -52,16 +51,22 @@ body {
         transform: rotate(360deg)
     }
 }
-@media screen  and (max-width:1200px) {
+
+@media screen  and (max-width: 1200px) {
 
 }
 
-.headerMenu{
+.headerMenu {
+    min-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     justify-content: space-between;
 }
+#tempCilDash {
+    clip: rect(50px,100px,200px,0px);
+}
+
 header {
     background: repeating-linear-gradient(-45deg, #76d32d 20px, #f8f4eb 20px, #cdf7ad 80px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, .2);
@@ -85,6 +90,11 @@ nav {
     text-align: center;
 }
 
+.termoSVG {
+    width: 20%;
+    padding-top: 5%;
+    padding-left: 40%;
+}
 ul {
     margin: 0;
     margin-right: 25px;
@@ -126,45 +136,4 @@ li a:after {
 
 li a:hover:after {
     width: 100%;
-}
-
-@media screen and (max-width: 574px) {
-    .logo-box {
-        float: none;
-        margin: 0 auto;
-    }
-
-    ul {
-        float: none;
-        margin: 0 25px;
-    }
-
-    li:first-of-type {
-        margin-left: 0
-    }
-}
-
-@media screen and (max-width: 493px) {
-    nav {
-        overflow: visible
-    }
-
-    ul {
-        height: auto;
-        margin: 25px 25px 0 25px;
-        line-height: 50px;
-    }
-
-    li {
-        display: block;
-        margin: 0;
-    }
-
-    li:hover {
-        background: rgba(0, 0, 0, .1)
-    }
-
-    li a:after {
-        content: none;
-    }
 }
